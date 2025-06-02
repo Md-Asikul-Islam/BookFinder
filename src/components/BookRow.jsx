@@ -1,12 +1,12 @@
 import React from 'react'
 import BookDeatails from './BookDeatails'
-import FeatureBook from './FeatureBook'
+import FeatureBook from './FeatureBook';
 
-function BookRow() {
+function BookRow({book, onFeatureBook}) {
   return (
-    <div>
-        <BookDeatails/>
-        <FeatureBook />
+    <div className="">
+        <BookDeatails title={book.title} cover={book.cover} description={book.description} author={book.author}  />
+        <FeatureBook book={book} onFeatureBook={onFeatureBook} />
     </div>
   )
 }

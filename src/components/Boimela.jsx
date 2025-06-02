@@ -1,18 +1,27 @@
-import React, { useState } from "react";
-import { Books } from "../data";
-import Header from "./Header";
-import SearchBar from "./SearchBar";
-import BookList from "./BookList";
+import React from 'react'
+import { useState } from 'react';
+import Header from './Header';
+import SearchBar from './SearchBar';
+import BookList from './BookList';
+import { Books } from './../data';
 
 function Boimela() {
-  const [searchTerm, setSearchTerm] = useState("")
+  const [books, setBooks] = useState(Books);
+  const [searchTerm, setSearchTerm] = useState('');
+  const toggleFeatured = (id) => {
+        setBooks(
+            books.map((book) =>
+                book.id === id ? { ...book, featured: !book.featured } : book
+            )
+        );
+    };
   return (
-    <div className="container mx-auto px-4 py-6 space-y-6">
-      <Header />
+    <div>
+      <Header/>
       <SearchBar searchTerm={searchTerm} onSearchTerm={setSearchTerm} />
-      <BookList searchTerm={searchTerm} books={Books}/>
+      <BookList searchTerm={searchTerm} books={books} onFeatureBook={toggleFeatured} />
     </div>
-  );
+  )
 }
 
-export default Boimela;
+export default Boimela

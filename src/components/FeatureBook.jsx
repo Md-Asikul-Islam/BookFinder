@@ -1,10 +1,11 @@
-import React from 'react'
+import { Star } from "lucide-react";
 
-function FeatureBook() {
-       
+function FeatureBook({ book, onFeatureBook }) {
   return (
-    <div>FeatureBook</div>
-  )
+    <button className="cursor-pointer" onClick={() => onFeatureBook(book.id)}>
+      <Star color={book.featured ? "Green" : "Black"} />
+    </button>
+  );
 }
 
-export default FeatureBook
+export default FeatureBook;
