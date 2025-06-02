@@ -5,8 +5,8 @@ import FeatureBook from './FeatureBook'
 function BookRow() {
   return (
     <div>
-        <BookDeatails />
-        <FeatureBook/>
+        <BookDeatails/>
+        <FeatureBook />
     </div>
   )
 }

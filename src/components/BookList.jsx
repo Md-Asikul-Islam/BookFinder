@@ -1,10 +1,10 @@
 import React from "react";
 import BookRow from "./BookRow";
 
-function BookList() {
+function BookList({searchTerm, books, onFeatureBook}) {
   return (
     <>
-      <BookRow />
+      <BookRow/>
     </>
   );
 }

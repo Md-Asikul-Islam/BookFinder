@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Books } from "../data";
 import Header from "./Header";
 import SearchBar from "./SearchBar";
 import BookList from "./BookList";
 
 function Boimela() {
-  const book = Books.map((book) => book)
+  const [searchTerm, setSearchTerm] = useState("")
   return (
-    <>
+    <div className="container mx-auto px-4 py-6 space-y-6">
       <Header />
-      <SearchBar />
-      <BookList />
-    </>
+      <SearchBar searchTerm={searchTerm} onSearchTerm={setSearchTerm} />
+      <BookList searchTerm={searchTerm} books={Books}/>
+    </div>
   );
 }
 
