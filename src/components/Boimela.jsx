@@ -16,7 +16,7 @@ function Boimela() {
         );
     };
   return (
-    <div>
+    <div >
       <Header/>
       <SearchBar searchTerm={searchTerm} onSearchTerm={setSearchTerm} />
       <BookList searchTerm={searchTerm} books={books} onFeatureBook={toggleFeatured} />

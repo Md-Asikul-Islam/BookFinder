@@ -7,7 +7,7 @@ function BookList({ searchTerm, books,onFeatureBook }) {
   );
 
   return (
-    <div className="space-y-4">
+    <div className=" mx-auto space-y-4 pt-[2rem] ">
       {filteredBooks.map((book) => (
         <BookRow key={book.id} book={book} onFeatureBook={onFeatureBook} />
       ))}

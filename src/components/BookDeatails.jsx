@@ -2,22 +2,23 @@ import React from "react";
 
 function BookDetails({ title, cover, description, author }) {
   return (
-    <div className="">
+    <div className="flex gap-x-[2rem] ">
       <img
         src={cover}
         alt="cover"
-        className="w-40 h-60 object-cover rounded-md shadow-md"
+        className="w-[6rem] sm:[6rem] md:w-[8rem] lg:w-[12rem] xl:w-[16rem] h-auto ronded-lg"
       />
-
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
-        {title}
-      </h1>
-      <h2 className="text-xl sm:text-2xl font-semibold text-gray-600">
-        {author}
-      </h2>
-      <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-        {description}
-      </p>
+      <div>
+        <h1 className="text-[2rem] sm:text-[2rem] md:text-[2.5rem] font-bold text-black">
+          {title}
+        </h1>
+        <h2 className="text-[1.6rem] sm:text-[1.6rem] md:text-[1.8rem] font-semibold text-black mt-1">
+          {author}
+        </h2>
+        <p className="text-[1.3rem] sm:text-[1.3rem] md:text-[1.5rem] lg:text-[1.7rem] xl:text-[1.8rem] text-gray-500 mt-2">
+          {description}
+        </p>
+      </div>
     </div>
   );
 }
